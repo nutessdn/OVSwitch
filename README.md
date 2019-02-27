@@ -1,6 +1,10 @@
-## OVSwitch 
+##OpenvSwitch 
+*O OpenvSwitch é um switch virtual multi-camadas, ele foi arquitetado para permitir configuração e programação de forma automatizada.*
+*Ele foi projetado para permitir a automação maciça de rede por meio de extensão programática, 
+ enquanto ainda suporta interfaces e protocolos de gerenciamento padrão 
+ (por exemplo, NetFlow, sFlow, IPFIX, RSPAN, CLI, LACP, 802.1ag).*
 
-**#Acessando o Switch**
+*#Acessando o Switch*
 *( necessita de permissão root)*
 
 
