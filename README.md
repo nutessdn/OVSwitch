@@ -1,10 +1,20 @@
-## OpenvSwitch 
+# OpenvSwitch 
 
-*O OpenvSwitch é um switch virtual multi-camadas, ele foi arquitetado para permitir configuração e programação de forma automatizada.Ele foi projetado para permitir a automação maciça de rede por meio de extensão programática,enquanto ainda suporta interfaces e protocolos de gerenciamento padrão:*
-  (por exemplo, NetFlow, sFlow, IPFIX, RSPAN, CLI, LACP, 802.1ag).*
+*O OpenvSwitch é um switch virtual multi-camadas, ele foi arquitetado para permitir configuração e programação de forma automatizada.Ele foi projetado para permitir a automação de rede por meio de extensão programática,enquanto ainda suporta interfaces e protocolos de gerenciamento padrão (por exemplo, NetFlow, sFlow, IPFIX, RSPAN, CLI, LACP, 802.1ag).*
 
-#			*Acessando o Switch*
-		*(necessita de permissão root)*
+O OpenVSwitch contém vários programas utilitários. Cada um é responsável por uma parte de sua arquitetura. Na tabela abaixo pode ser verificada uma breve descrição de cada utilitário. 
+
+
+Utilitário | Função
+-----------|------------- 
+ovs-vsctl  | Configurar o OpenVSwitch
+ovs-ofctl  | Administrar o switch em modo Openflow
+ovs-appctl | Comunicar com os deamons do switch
+ovs-dpctl  | Controlar o encaminhamento do switch
+
+###			*Acessando o Switch*
+      * (necessita de permissão root) *
+
 
 
 
