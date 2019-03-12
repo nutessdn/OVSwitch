@@ -25,11 +25,23 @@ ovs-dpctl  | Controlar o encaminhamento do switch
 
 **$ ovs-vsctl add-port br0 eth1 tag=42** -> Adicionando uma porta eth com uma tag
 
+**$ watch ovs-appctl fdb/show br0** -> Lista a tabela de encaminhamento da bridge
 
+**$ ovs-dpctl show** -> Lista as estatisticas das portas
+
+**$ ovs-ofctl add-flow br0 actions=NORMAL** -> Adicionando um fluxo
+
+**$ ovs-ofctl add-flow br0 priority=0,actions=NORMAL** -> Adicionando um fluxo com a mais alta prioridade
 
 
 ###			*Acessando o Switch*
-      * (necessita de permissão root) *
+      * (necessita de permissão root)
+
+    *  *Caso o equipamento o qual esteja instalado o OpenVSwitch seja um dispositivo remoto use:*
+
+      **$ ssh root@192.168.2.1** Realiza uma comunicação utilizando SSH, podendo assim executar os comandos diretamente como root, a utilização de autenticação utilizando certificados depende da configuração e instalação, aconselha-se a utilização.
+
+    *  *Caso o equipamento esteja instalado em uma maquina local, que permita o acesso direto pode-se executar os comandos direto no terminal
 
 
 
@@ -44,7 +56,7 @@ ovs-dpctl  | Controlar o encaminhamento do switch
 -> Se conecta ao switch *s1* e retorna o estado das portas e recursos disponíveis;
 
 **$ ovs-ofctl dump-flows br0 table=4**
--> Listando fluxos da tabela 4 da bridge br0
+-> Listando fluxos da tabela 4 da bridge *br0*
 
 **$ sudo ovs-ofctl dump-flows s1**
 -> Exibe os fluxos nas tabelas(necessita iniciar o controlador, caso contrario estará vazia);
