@@ -17,15 +17,17 @@ ovs-dpctl  | Controlar o encaminhamento do switch
 ## Básicos:
 
 
-**$ ovs-vsctl show** -> Lista as portas e bridges
+**$ ovs-vsctl show** -> Exibe o status das bridges com portas associadas a estas e do controlador
 
 **$ ovs-vsctl add-br br0** -> Adiciona uma bridge com nome br0
 
 **$ ovs-vsctl add-port br0 eth0** -> Adiciona uma porta eth na bridge br0
 
+**$ ovs-vsctl list-port br0** -> Lista as portas na bridge br0
+
 **$ ovs-vsctl del-port br0 eth0** -> Deleta uma porta eth na bridge br0
 
-**$ ovs-vsctl add-port br0 eth1 tag=42** -> Adicionando uma porta eth com uma tag atuando esta como Vlan
+**$ ovs-vsctl add-port br0 eth1 tag=42** -> Adicionando uma porta eth com uma tag atuando esta como acesso a _Vlan42_
 
 **$ watch ovs-appctl fdb/show br0** -> Lista a tabela de encaminhamento da bridge
 
