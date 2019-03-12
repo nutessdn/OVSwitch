@@ -43,7 +43,7 @@ ovs-dpctl  | Controlar o encaminhamento do switch
 
      *Caso o equipamento o qual esteja instalado o OpenVSwitch seja um dispositivo remoto use:*
 
-      **$ ssh root@192.168.2.1** Realiza uma comunicação utilizando SSH, podendo assim executar os comandos diretamente como root, a utilização de autenticação utilizando certificados depende da configuração e instalação, para isto utiliza-se o parâmetro _-Y_.
+      **$ ssh root@192.168.2.1** Realiza uma comunicação utilizando SSH, podendo assim executar os comandos diretamente como root, a utilização de autenticação utilizando certificados depende da configuração e instalação.
 
      *Caso o equipamento esteja instalado em uma maquina local, que permita o acesso direto pode-se executar os comandos direto no terminal*
 
