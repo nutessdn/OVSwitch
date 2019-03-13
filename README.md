@@ -11,7 +11,7 @@ Utilitário | Função
 -----------|-------------
 ovs-vsctl  | Configurar o OpenVSwitch
 ovs-ofctl  | Administrar o switch em modo Openflow
-ovs-appctl | Comunicar com os deamons do switch
+ovs-appctl | Comunicar com os daemons do switch
 ovs-dpctl  | Controlar o encaminhamento do switch
 
 ## Básicos:
@@ -99,9 +99,11 @@ Caso deseja certificar-se se existe um controlador atuando, pode utulizar:
 -> Se existir, este retornará a porta e o tipo de protocolo e o ip que é utilizado na comunicação
 
 **$ sudo ovs-vsctl del-controller br0**
+
 -> Desabilita o controlador, fecha a comunicação entre o controlador e o switch
 
 **Habilitando o OVSDB**
+
 Para ter um gerenciador remoto das configurações do switch é necessário habilitar o OVSDB. Para tal, deve executar o seguinte comando:
 
 **$ ovs-vsctl set-manager tcp:[ip]:[porta]**
@@ -111,20 +113,26 @@ Para ter um gerenciador remoto das configurações do switch é necessário habi
 ###  **Usando o ovs-ofctl:**
 
 **$ sudo ovs-ofctl show br0**
+
 -> Se conecta ao switch *br0* e retorna o estado das portas e recursos disponíveis;
 
 **$ ovs-ofctl dump-flows br0 table=4**
+
 -> Listando fluxos da tabela 4 da bridge *br0*
 
 **$ sudo ovs-ofctl dump-flows br0**
+
 -> Exibe os fluxos nas tabelas(necessita iniciar o controlador, caso contrario estará vazia);
 
 **$ ovs-ofctl dump-flows tcp:[ip]:[porta padrão: 6633 + n] (*n é o número do switch*)**
+
 -> Realizando esta conexão TCP, pode-se recuperar o fluxo específico de um switch;
 
 **ovs-ofctl add-flow br0 in_port=1,actions=output:2**
+
 -> Encaminhará os pacotes enviados a porta 1 para porta 2 e vice-e-versa;
 (checar a tabela de fluxo para ver o resultado)
 
 **$ sudo ovs-ofctl del-flows s1**
+
 -> Limpa os fluxos
